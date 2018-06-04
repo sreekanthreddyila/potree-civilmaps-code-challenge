@@ -1,0 +1,52 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Potree with Pointer Lock</title>
+	<link rel="stylesheet" type="text/css" href="./lib/potree.css">
+</head>
+
+<body>
+
+	<script src="./lib/three.js"></script>
+	<script src="./lib/stats.min.js"></script>
+	<script src="./lib/dat.gui.min.js"></script>
+
+	<script src="./lib/potree.js"></script>
+	<script src="./lib/ProgressBar.js"></script>
+
+
+	<script>
+
+		var sceneProperties = {
+			path: "http://betaserver.icgc.cat/potree12/resources/pointclouds/templesagradafamilia/cloud.js",
+			cameraPosition: null,
+			cameraTarget: null,
+			fov: 60,
+			sizeType: "Adaptive",
+			quality: null,
+			material: "RGB",
+			pointLimit: 2,
+			pointSize: 1,
+			navigation: "Orbit",
+		};
+	</script>
+
+	<div class="info" style="position: absolute; left: 300px; right: 300px; top: 10px; text-align: center;">
+		<br /> Potree with Pointer Control
+		<br/> Keys Left, Right, Up and Down
+	</div>
+
+	<!-- INFOS / STATS -->
+	<div id="lblNumVisibleNodes" class="info" style="position: absolute; left: 10px; top: 80px; width: 400px; color:white"></div>
+	<div id="lblNumVisiblePoints" class="info" style="position: absolute; left: 10px; top: 100px; width: 400px; color:white"></div>
+	<div id="lblMessage" class="info" style="position: absolute; left: 10px; bottom: 0px; width: 400px; color:white"></div>
+
+
+	<div id="renderArea"></div>
+
+	<script src="./lib/viewer.js"></script>
+
+</body>
+
+</html>
